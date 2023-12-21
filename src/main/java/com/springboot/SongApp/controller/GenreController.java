@@ -1,14 +1,7 @@
 package com.springboot.SongApp.controller;
 
-import com.springboot.SongApp.model.Genre;
-import com.springboot.SongApp.model.Song;
-import com.springboot.SongApp.repository.GenreRepository;
-import com.springboot.SongApp.service.GenreService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.springboot.SongApp.service.implementation.GenreService;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class GenreController {
@@ -19,7 +12,9 @@ public class GenreController {
         this.genreService = genreService;
     }
 
-    @RequestMapping("/genres")
+
+
+    /*@RequestMapping("/genres")
     public List<Genre> getGenres(){
         return genreService.getAllGenres();
     }
@@ -33,5 +28,5 @@ public class GenreController {
     @RequestMapping("/addGenre")
     public void addGenre(Genre genre){
         genreService.addGenre(genre);
-    }
+    }*/
 }

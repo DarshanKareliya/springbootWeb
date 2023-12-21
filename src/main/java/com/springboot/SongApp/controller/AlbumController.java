@@ -1,12 +1,7 @@
 package com.springboot.SongApp.controller;
 
-import com.springboot.SongApp.model.Album;
-import com.springboot.SongApp.service.AlbumService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.springboot.SongApp.service.implementation.AlbumService;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class AlbumController {
@@ -16,7 +11,9 @@ public class AlbumController {
         this.albumService = albumService;
     }
 
-    @RequestMapping("/albums")
+
+
+    /*@RequestMapping("/albums")
     public List<Album> getAlbums(){
         return albumService.getAllAlbums();
     }
@@ -31,5 +28,5 @@ public class AlbumController {
     @RequestMapping("/addAlbum")
     public void addAlbum(Album album){
         albumService.addAlbum(album);
-    }
+    }*/
 }

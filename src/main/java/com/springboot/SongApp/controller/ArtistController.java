@@ -1,12 +1,7 @@
 package com.springboot.SongApp.controller;
 
-import com.springboot.SongApp.model.Artist;
-import com.springboot.SongApp.service.ArtistService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.springboot.SongApp.service.implementation.ArtistService;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class ArtistController {
@@ -17,7 +12,7 @@ public class ArtistController {
         this.artistService = artistService;
     }
 
-    @RequestMapping("/artists")
+    /*@RequestMapping("/artists")
     public List<Artist> getArtists(){
         return artistService.getAllArtists();
     }
@@ -32,5 +27,5 @@ public class ArtistController {
     @RequestMapping("/addArtist")
     public void addArtist(Artist artist){
         artistService.addArtist(artist);
-    }
+    }*/
 }

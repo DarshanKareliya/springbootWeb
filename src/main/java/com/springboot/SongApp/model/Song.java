@@ -23,6 +23,7 @@ public class Song {
     @Column(name = "song_name")
     private String songName;
     //private Date releaseDate;
+
     @ManyToOne()
     private Genre genre;
 
@@ -31,4 +32,15 @@ public class Song {
 
     @ManyToMany
     private List<Artist> artists;
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songId=" + songId +
+                ", songName='" + songName + '\'' +
+                ", genre=" + genre.getGenreName() +
+                ", album=" + album.getAlbumName() +
+                ", artists=" + artists.toString() +
+                '}';
+    }
 }
