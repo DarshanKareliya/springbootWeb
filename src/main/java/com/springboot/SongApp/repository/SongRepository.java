@@ -11,6 +11,5 @@ import java.util.Optional;
 @Repository
 public interface SongRepository extends JpaRepository<Song,Integer> , JpaSpecificationExecutor<Song> {
 
-    Optional<Song> findBySongName(String songName);
 
 }
